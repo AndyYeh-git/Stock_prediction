@@ -32,9 +32,9 @@ class Stock:
             parameter = {
                 "dataset": "TaiwanStockPrice",
                 "data_id": stock_number,
-                "start_date": "2019-01-01",
-                "end_date": "2022-10-09",
-                "token": "your_token"
+                "start_date": "2020-01-01",
+                "end_date": "2025-07-15",
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRlIjoiMjAyNS0wNy0xNSAxOTo0NzoyMyIsInVzZXJfaWQiOiJNSk9JRyIsImlwIjoiMTIyLjEwMC4xMTQuMTQ1In0.puggpmhGrl76kjLrzSWTXTpYZRyKuhyc5ysmi513j3g"
             }
             data = requests.get(url, params=parameter)
             data = data.json()
@@ -51,7 +51,7 @@ class Stock:
 
 os.makedirs('stocks', exist_ok=True)
 #for i in range(500):
-for i in range(500, len(stock_num)):
+for i in range(1500, len(stock_num)):
     stock = Stock(stock_num[i])
     data = stock.scrape()
     data.to_csv('stocks/'+ stock_num[i] + '.csv', index=False)
