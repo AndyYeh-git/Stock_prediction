@@ -34,7 +34,7 @@ class Stock:
                 "data_id": stock_number,
                 "start_date": "2020-01-01",
                 "end_date": "2025-07-15",
-                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRlIjoiMjAyNS0wNy0xNSAxOTo0NzoyMyIsInVzZXJfaWQiOiJNSk9JRyIsImlwIjoiMTIyLjEwMC4xMTQuMTQ1In0.puggpmhGrl76kjLrzSWTXTpYZRyKuhyc5ysmi513j3g"
+                "token": "your token here"
             }
             data = requests.get(url, params=parameter)
             data = data.json()
